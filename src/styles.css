@@ -1,11 +1,18 @@
 
 @import '~bootstrap/dist/css/bootstrap.min.css'; 
+@import '@fortawesome/fontawesome-free/css/all.min.css';
 html, body {
-
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
+  font-family: "Poppins", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
   padding: 0;
-  box-sizing:border-box
+  box-sizing:border-box;
+  height: 100%;
+  margin: 0;
+  color: black!important;
+
+} 
+html {
+  height: 100%; /* Ensure the HTML element takes up the full viewport height */
 }
 .sidebar{
   min-height: 100vh;
@@ -15,5 +22,38 @@ html, body {
   min-height: 100vh;  
   max-height: 100vh;  
   overflow: scroll;
+  
 }
 
+.commoncard{
+  width: 420px!important;
+  height: 170px!important;
+  border: 1px white;
+}
+
+
+
+/* scroll */
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #808080;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #606060;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #808080 #f0f0f0;
+}

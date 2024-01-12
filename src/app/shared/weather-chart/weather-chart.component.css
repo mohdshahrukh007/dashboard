@@ -1,0 +1,18 @@
+.card{
+    max-width: 25rem;
+    max-height: 19rem;
+    min-width: 18rem;
+    min-height: 14rem;
+    border: 1px white;
+
+}
+.left{
+    width: 50%;
+}
+.right{
+    width: 50%;
+}
+.progress{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

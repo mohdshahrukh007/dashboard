@@ -8,12 +8,10 @@ import { Chart } from 'angular-highcharts';
   styleUrls: ['./piechart.component.css']
 })
 export class PiechartComponent  {
-  @Input() height: any = 225;
 
   chart = new Chart({
     chart: {
       type: 'line',
-      height: this.height || 225
     },
     title: {
       text: 'Product Sales Chart'

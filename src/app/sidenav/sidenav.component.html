@@ -1,44 +1,77 @@
-    <div class="sidenavTab bg-dark ease" [ngClass]="{'largewidth': showSidenav, 'smallwidth': !showSidenav}">
+    <div class="shadow-lg navbar-nav bg  sidenavTab h-100   ease" [ngClass]="{'largewidth': showSidenav, 'smallwidth': !showSidenav}">
         <nav>
             <ul class="nav ">
                 <li class="nav-item">
-                    <a class="nav-link" routerLink='/dashboard' *ngIf="showSidenav">
-                        <i class="fas fa-home"></i> Home
-                    </a>
-                    <a class="nav-link" href="#" *ngIf="!showSidenav">
+                   
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="collapse" href="#collapse" aria-expanded="false" aria-controls="collapse" title="Description" *ngIf="showSidenav">
+                            <i class="fas fa-home"></i> Home  
+                        </a>
+                        <div class="dropdown easeheight collapse" id="collapse">
+                            <ul class="collapse" id="collapse" class=" nav collapse show submenu" id="dashboard" >
+                                <li class="nav-item"><a class="nav-link active" href="index.html">
+                                    <div class="d-flex ml-3 align-items-center"><span class="nav-link-text ps-1">Default</span></div>
+                                  </a><!-- more inner pages--></li>
+                                <li class="nav-item"><a class="nav-link" href="dashboard/analytics.html">
+                                    <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Analytics</span></div>
+                                  </a><!-- more inner pages--></li>
+                                <li class="nav-item"><a class="nav-link" href="dashboard/crm.html">
+                                    <div class="d-flex align-items-center"><span class="nav-link-text ps-1">CRM</span></div>
+                                  </a><!-- more inner pages--></li>
+                                <li class="nav-item"><a class="nav-link" href="dashboard/e-commerce.html">
+                                    <div class="d-flex align-items-center"><span class="nav-link-text ps-1">E commerce</span></div>
+                                  </a><!-- more inner pages--></li>
+                                <li class="nav-item"><a class="nav-link" href="dashboard/lms.html">
+                                    <div class="d-flex align-items-center"><span class="nav-link-text ps-1">LMS</span><span class="badge rounded-pill ms-2  text-success bg-success text-white">New</span></div>
+                                  </a><!-- more inner pages--></li>
+                                <li class="nav-item"><a class="nav-link" href="dashboard/project-management.html">
+                                    <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Management</span></div>
+                                  </a><!-- more inner pages--></li>
+                                <li class="nav-item"><a class="nav-link" href="dashboard/saas.html">
+                                    <div class="d-flex align-items-center"><span class="nav-link-text ps-1">SaaS</span></div>
+                                  </a><!-- more inner pages--></li>
+                                <li class="nav-item"><a class="nav-link" href="dashboard/support-desk.html">
+                                    <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Support desk</span><span class="badge rounded-pill ms-2  text-success bg-success text-white">New</span></div>
+                                  </a><!-- more inner pages--></li>
+                              </ul>
+                        </div>
+                    </div>
+                   
+                  
+                    <a class="nav-link"  *ngIf="!showSidenav">
                         <i class="fas fa-home"></i>
                     </a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="#" *ngIf="showSidenav">
+                    <a class="nav-link"  *ngIf="showSidenav">
                         <i class="fas fa-user"></i> Profile
                     </a>
                     
-                    <a class="nav-link" href="#" *ngIf="!showSidenav">
+                    <a class="nav-link"  *ngIf="!showSidenav">
                         <i class="fas fa-user"></i>
                     </a>
                 </li>
                 <li class="nav-item dropdown ">
-                    <a class="  d-flex nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-cogs mx-1"></i> <p *ngIf="showSidenav">Settings</p>
+                    <a class="  d-flex nav-link dropdown-toggle "  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-cogs mx-1"></i> <p  *ngIf="showSidenav">Settings</p>
                     </a>
-                    <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu  " aria-labelledby="navbarDropdown">
                         <li class="nav-item">
-                            <a class="dropdown-item d-flex " href="#" >
+                            <a class="dropdown-item d-flex "  >
                                 <i class="mx-1 fas fa-cogs"></i>
                                 <p>General</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="dropdown-item d-flex " href="#" >
+                            <a class="dropdown-item d-flex "  >
                                 <i class="mx-1 fas fa-lock"></i>
                                 <p>Security</p>
                             </a>
                          </li>
                         <li class="nav-item"><hr class="dropdown-divider"></li>
                         <li class="nav-item">
-                            <a class="dropdown-item d-flex " href="#" *ngIf="showSidenav">
+                            <a class="dropdown-item d-flex "  *ngIf="showSidenav">
                                 <i class="mx-1 fas fa-cogs"></i>
                                 <p>Advanced</p>
                             </a>
@@ -46,10 +79,10 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" *ngIf="showSidenav">
+                    <a class="nav-link"  *ngIf="showSidenav">
                         <i class="fas fa-envelope"></i> Messages
                     </a>
-                    <a class="nav-link" href="#" *ngIf="!showSidenav">
+                    <a class="nav-link"  *ngIf="!showSidenav">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </li>
@@ -57,10 +90,10 @@
                     <span *ngIf="!showSidenav" class="position-absolute top-10 mx-3 end-10  badge  bg-secondary rounded-pill bg-danger">
                         99+
                       </span>
-                    <a class="nav-link d-flex" href="#" >
+                    <a class="nav-link d-flex"  >
                         <i class="fas fa-bell"></i> 
                         <p *ngIf="showSidenav"  >Notifications</p>
-                        <span *ngIf="showSidenav" class="position-relative  badge px-1 rounded-pill bg-danger">
+                        <span *ngIf="showSidenav" class=" mx-2 position-relative  badge px-1 rounded-pill bg-danger">
                             99+
                           </span>
                     </a>

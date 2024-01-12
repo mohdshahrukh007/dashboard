@@ -13,7 +13,9 @@ import { WeatherChartComponent } from './weather-chart/weather-chart.component';
     CommonModule,
     ChartModule,
   ],exports:[
-    PiechartComponent
+    PiechartComponent,
+    WeatherChartComponent
+
   ],
   providers: [ 
     // { provide: HIGHCHARTS_MODULES, useFactory: () => [ more, exporting ] } // add as factory to your providers

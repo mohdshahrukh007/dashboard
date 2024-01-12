@@ -18,6 +18,7 @@ time, mark, audio, video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -58,3 +59,22 @@ body {
 }
 
 /* Add your specific styles below this point */
+
+.bg{
+    height: 100vh;
+    background-color: rgba(237, 242, 249, 0.96);;
+}
+.container-fluid{
+margin-left: 3rem;
+}
+
+
+.smallwidth{
+ margin-left: 4rem;
+}
+.largewidth{
+margin-left: 15rem;
+ }
+ .ease{
+    transition: width 0.3s;
+}

@@ -1,1 +1,37 @@
-node_modules
+# Node.js
+node_modules/
+
+# Angular
+/dist/
+/e2e/*.log
+/e2e/*.screenshot.png
+/e2e/videos/
+*.compiled
+*.comiled.js
+*.tsbuildinfo
+
+# Angular cache
+/dist/cashe/
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# Compiled output
+*.js
+*.js.map
+*.d.ts
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS-generated files
+.DS_Store
+Thumbs.db

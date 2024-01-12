@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { SharedataService } from './sharedata.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Dashboard';
+  isSidebarOpen: boolean = true;
+  constructor(private sharedService:SharedataService){}
+  ngOnInit() {
+    this.sharedService.showSidenav$.subscribe((isOpen) => {
+      this.isSidebarOpen = !this.isSidebarOpen;
+      console.log(this.isSidebarOpen)
+    });
+
+  }
+
 }
