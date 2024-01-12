@@ -1,0 +1,16 @@
+ .nav-item{
+    color: white;
+    list-style:  none;
+    display: flex;
+    line-height: normal;
+    margin-bottom: 0;
+ }
+ .right-nav-item{
+    align-items: baseline;
+    margin-bottom:0 ;
+ }
+ .nav-item i {
+    margin-top:5px;
+    margin-left:5px;
+    margin-right:5px
+ }

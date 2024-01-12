@@ -1,0 +1,50 @@
+*{
+    color: white;
+} 
+.ease{
+    transition: width 0.2s;
+}
+.h-100{
+    position: relative;
+}
+.smallwidth{
+    height: 100vh!important;
+    width: 4rem;
+}
+.largewidth{
+    height: 100vh!important;
+    width: 8rem;
+}
+.nav-item,.dropdown-item{
+    font-size: small;
+    padding: 3px;
+    width: 100%;
+    line-height: normal;
+    align-items: center;
+}
+
+.sidenavTab a:hover i {
+    color: black;
+}
+
+.nav-link:hover p{
+    color: black;
+}
+.sidenavTab a:hover {
+    background-color: white;
+    color: black;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Add transition for smooth effect */
+
+}
+p{
+    align-items: center;
+    line-height: normal;
+    margin-bottom: 0;
+}
+.dropdown-item:hover{
+    background: black;
+    color: white;
+}
+.sidenavTab{
+    overflow-y: hidden!important;
+}

@@ -1,0 +1,70 @@
+    <div class="sidenavTab bg-dark ease" [ngClass]="{'largewidth': showSidenav, 'smallwidth': !showSidenav}">
+        <nav>
+            <ul class="nav ">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='/dashboard' *ngIf="showSidenav">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a class="nav-link" href="#" *ngIf="!showSidenav">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#" *ngIf="showSidenav">
+                        <i class="fas fa-user"></i> Profile
+                    </a>
+                    
+                    <a class="nav-link" href="#" *ngIf="!showSidenav">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </li>
+                <li class="nav-item dropdown ">
+                    <a class="  d-flex nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-cogs mx-1"></i> <p *ngIf="showSidenav">Settings</p>
+                    </a>
+                    <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                        <li class="nav-item">
+                            <a class="dropdown-item d-flex " href="#" >
+                                <i class="mx-1 fas fa-cogs"></i>
+                                <p>General</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="dropdown-item d-flex " href="#" >
+                                <i class="mx-1 fas fa-lock"></i>
+                                <p>Security</p>
+                            </a>
+                         </li>
+                        <li class="nav-item"><hr class="dropdown-divider"></li>
+                        <li class="nav-item">
+                            <a class="dropdown-item d-flex " href="#" *ngIf="showSidenav">
+                                <i class="mx-1 fas fa-cogs"></i>
+                                <p>Advanced</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" *ngIf="showSidenav">
+                        <i class="fas fa-envelope"></i> Messages
+                    </a>
+                    <a class="nav-link" href="#" *ngIf="!showSidenav">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <span *ngIf="!showSidenav" class="position-absolute top-10 mx-3 end-10  badge  bg-secondary rounded-pill bg-danger">
+                        99+
+                      </span>
+                    <a class="nav-link d-flex" href="#" >
+                        <i class="fas fa-bell"></i> 
+                        <p *ngIf="showSidenav"  >Notifications</p>
+                        <span *ngIf="showSidenav" class="position-relative  badge px-1 rounded-pill bg-danger">
+                            99+
+                          </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
